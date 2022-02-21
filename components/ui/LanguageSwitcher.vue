@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <select @input="switchLocale">
+  <div class="relative">
+    <select
+      aria-label="Select your language"
+      class="text-white border border-white appearance-none bg-transparent py-1 pl-2 pr-12 focus:outline-0 focus:ring-2 ring-offset-2 ring-offset-purple ring-orange"
+      @input="switchLocale"
+    >
       <option
         v-for="locale in locales"
         :key="locale.code"
@@ -10,6 +14,7 @@
         {{ locale.name }}
       </option>
     </select>
+    <IconChevDown class="absolute top-1/2 right-2 -translate-y-2/4" />
   </div>
 </template>
 

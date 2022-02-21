@@ -4,7 +4,12 @@ export default {
     EFA: 'European Free Alliance'
   },
   hero: {
-    introduction: ''
+    title: [
+      '10 Proposals',
+      'for a Europe',
+      'of all Peoples'
+    ],
+    introduction: 'Short introductory text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
   },
   proposal: {
     support: 'Support this proposal',

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="min-h-screen bg-purple text-white">
     {{ proposal.number }}
     <nuxt-content :document="proposal" />
   </div>
