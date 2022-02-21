@@ -1,9 +1,7 @@
 <template>
-  <nav>
-    Nav
-
-    <UiLanguageSwitcher />
-  </nav>
+  <footer>
+    Footer
+  </footer>
 </template>
 
 <script>

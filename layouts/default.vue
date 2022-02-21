@@ -2,13 +2,12 @@
   <div>
     <UiNav />
     <Nuxt />
+    <UiFooter />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DefaultLayout',
-
   head () {
     return this.$nuxtI18nHead()
   }

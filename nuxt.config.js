@@ -18,7 +18,9 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    './assets/css/style.css'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -53,9 +55,9 @@ export default {
   // i18n
   i18n: {
     locales: [
-      { code: 'en', file: 'en.js' },
-      { code: 'fr', file: 'fr.js' },
-      { code: 'es', file: 'es.js'}
+      { code: 'en', file: 'en.js', name: 'English' },
+      { code: 'fr', file: 'fr.js', name: 'Français' },
+      { code: 'es', file: 'es.js', name: 'Español' }
     ],
     defaultLocale: 'en',
     lazy: true,
