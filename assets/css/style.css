@@ -1,0 +1,21 @@
+@font-face {
+  font-family: Geogrotesque;
+  src:
+    local("Geogrotesque Regular"),
+    local("Geogrotesque-Regular"),
+    url("../fonts/Geogrotesque-Regular.woff2") format("woff2"),
+    url("./fonts/Geogrotesque-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Geogrotesque;
+  src:
+    local("Geogrotesque Bold"),
+    local("Geogrotesque-Bold"),
+    url("../fonts/Geogrotesque-Bold.woff2") format("woff2"),
+    url("../fonts/Geogrotesque-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal
+}
