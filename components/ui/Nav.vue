@@ -12,6 +12,7 @@
         to="/"
         :class="[
           'block mr-2 overflow-hidden transition-all shrink-0',
+          'focus:ring focus:outline-none ring-orange/50 ring-offset-2 ring-offset-purple',
           {
             'w-logo-mini md:w-logo-mini-lg': scrolledPastFold,
             'w-logo-full md:w-logo-full-lg': !scrolledPastFold
@@ -54,7 +55,7 @@
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight
         this.scrolled = scrollTop > 0
-        this.scrolledPastFold = scrollTop > viewportHeight
+        this.scrolledPastFold = scrollTop > viewportHeight / 2
       }
     }
   }

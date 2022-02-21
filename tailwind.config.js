@@ -27,6 +27,9 @@ module.exports = {
         'logo-mini': '3rem',
         'logo-full-lg': '8.25rem',
         'logo-mini-lg': '4.25rem'
+      },
+      maxWidth: {
+        card: '30rem'
       }
     },
   },

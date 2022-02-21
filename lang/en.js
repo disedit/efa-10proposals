@@ -1,7 +1,9 @@
 export default {
   global: {
     title: '10 proposals for a Europe of all peoples',
-    EFA: 'European Free Alliance'
+    EFA: 'European Free Alliance',
+    language: 'Select your language',
+    skip: 'Skip to main content'
   },
   hero: {
     title: [

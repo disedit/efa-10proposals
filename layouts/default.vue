@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="bg-purple">
+    <UiSkipToContent />
     <UiNav />
     <Nuxt />
     <UiFooter />

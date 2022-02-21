@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
     <select
-      aria-label="Select your language"
-      class="text-white border border-white appearance-none bg-transparent py-1 pl-2 pr-12 focus:outline-0 focus:ring-2 ring-offset-2 ring-offset-purple ring-orange"
+      :aria-label="$t('global.language')"
+      class="text-white border border-white appearance-none bg-transparent py-1 pl-2 pr-12 focus:outline-0 focus:ring-2 ring-offset-2 ring-offset-purple ring-orange/50"
       @input="switchLocale"
     >
       <option
