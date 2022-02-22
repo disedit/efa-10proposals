@@ -6,7 +6,7 @@
 
 <style>
   .card h2 {
-    @apply text-3xl mb-4 text-purple font-semibold;
+    @apply text-4xl mb-4 text-purple font-semibold;
   }
 
   .card h2 strong {
@@ -14,6 +14,10 @@
   }
 
   .card p {
-    @apply text-gray-mid text-lg;
+    @apply text-gray-mid text-lg mb-3;
+  }
+
+  .card p:last-child {
+    @apply mb-0;
   }
 </style>
