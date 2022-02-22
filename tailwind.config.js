@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        title: 'calc(2.5rem + 2.5vw)'
+        title: 'calc(2.5rem + 2.5vw)',
+        number: '15rem'
       },
       padding: {
         nav: '4.5rem'
@@ -30,6 +31,9 @@ module.exports = {
       },
       maxWidth: {
         card: '30rem'
+      },
+      zIndex: {
+        100: '100'
       }
     },
   },
