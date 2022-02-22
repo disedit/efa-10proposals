@@ -23,7 +23,7 @@
 
       <span
         :class="[
-          'font-bold text-sm md:text-lg transition mr-2 leading-none',
+          'font-semibold text-sm md:text-lg transition mr-2 leading-none',
           {
             'opacity-100': scrolledPastFold,
             'opacity-0': !scrolledPastFold,

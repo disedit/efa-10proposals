@@ -1,7 +1,7 @@
 <template>
   <header class="relative flex min-h-screen bg-purple text-white items-center">
     <UiContainer class="relative z-20 pt-nav">
-      <h1 class="text-title font-bold leading-none">
+      <h1 class="text-title font-semibold leading-none">
         <em class="underline decoration-orange not-italic">
           {{ $t('hero.title.0') }}
         </em><br>
