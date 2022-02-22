@@ -3,7 +3,8 @@ export default {
     title: '10 proposals for a Europe of all peoples',
     EFA: 'European Free Alliance',
     language: 'Select your language',
-    skip: 'Skip to main content'
+    skip: 'Skip to main content',
+    newwindow: '(opens in a new window)'
   },
   hero: {
     title: [
@@ -18,7 +19,9 @@ export default {
     share: 'Share'
   },
   footer: {
-    euparl: 'With support...',
-    follow: 'Follow us'
+    euparl: 'With Financial Support of the European Parliament. The information on this website concerns only the author, the European Parliament is not responsible for the use and content of the information.',
+    follow: 'Follow us',
+    contact: 'Contact',
+    privacy: 'Privacy Policy'
   }
 }
