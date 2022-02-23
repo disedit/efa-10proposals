@@ -1,17 +1,22 @@
 <template>
   <span
     :class="[
-      'absolute text-number text-white font-semibold p-8 leading-none',
+      'text-8xl text-white font-semibold leading-none',
+      'md:absolute md:text-9xl lg:text-number md:p-8',
       {
-        'left-0 -translate-x-full': !isEven,
-        'right-0 translate-x-full': isEven,
-        'bottom-12': isDivisibleByThree
+        'md:left-0 md:-translate-x-full': !isEven,
+        'md:right-0 md:translate-x-full': isEven,
       }
     ]"
     :style="translate"
   >
-    <div class="rellax" :data-rellax-speed="parallaxSpeed">
-      {{ number }}
+    <div
+      class="rellax"
+      data-rellax-speed="0"
+      :data-rellax-tablet-speed="parallaxSpeed"
+      :data-rellax-desktop-speed="parallaxSpeed"
+    >
+      <span class="md:hidden">#</span>{{ number }}
     </div>
   </span>
 </template>

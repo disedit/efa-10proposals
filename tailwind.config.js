@@ -21,7 +21,7 @@ module.exports = {
         number: '15rem'
       },
       padding: {
-        nav: '4.5rem'
+        nav: '5rem'
       },
       width: {
         'logo-full': '6rem',

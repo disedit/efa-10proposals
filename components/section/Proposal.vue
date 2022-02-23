@@ -1,9 +1,15 @@
 <template>
-  <section class="proposal relative min-h-screen bg-purple text-white my-3 py-7">
-    <UiContainer class="rellax relative z-40" :data-rellax-speed="parallaxSpeed">
+  <section class="proposal relative md:min-h-screen bg-purple text-white my-3 py-7">
+    <SectionProposalBackground :image="proposal.image" />
+    <UiContainer
+      class="rellax relative z-40"
+      data-rellax-speed="0"
+      :data-rellax-tablet-speed="parallaxSpeed"
+      :data-rellax-desktop-speed="parallaxSpeed"
+    >
       <div
         :class="[
-          'relative max-w-card grid grid-cols-8 gap-5',
+          'relative md:max-w-card grid grid-cols-8 gap-5',
           {
             'mr-auto': isEven,
             'ml-auto': !isEven,
@@ -26,7 +32,6 @@
         </SectionProposalButton>
       </div>
     </UiContainer>
-    <SectionProposalBackground :image="proposal.image" />
   </section>
 </template>
 
