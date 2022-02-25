@@ -1,11 +1,13 @@
 <template>
   <component
     :is="tag"
-    class="
-      button flex items-center bg-white text-purple shadow-xl p-5
-      font-semibold text-lg hover:underline decoration-orange
-      focus:outline-none focus:ring ring-orange/75 ring-offset-4 ring-offset-purple
-    ">
+    :class="[
+      'button flex items-center bg-white text-purple shadow-xl',
+      'font-semibold text-lg',
+      'focus:outline-none focus:ring ring-orange/75 ring-offset-purple',
+      { 'p-5': !noPadding }
+    ]"
+    @click="$emit('click')">
     <slot />
   </component>
 </template>
@@ -16,6 +18,11 @@ export default {
     tag: {
       type: String,
       default: 'a'
+    },
+
+    noPadding: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -28,9 +35,10 @@ export default {
   width: 1.25em;
   margin-left: auto;
   transition: .25s cubic-bezier(.175,.885,.32,1.275);
+  flex-shrink: 0;
 }
 
 .button:hover svg {
-  transform: rotate(-5deg) scale(1.25);
+  transform: rotate(var(--rotate, -5deg)) scale(1.25);
 }
 </style>

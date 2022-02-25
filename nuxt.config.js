@@ -4,17 +4,21 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: '10 proposals for a Europe of all peoples - European Free Alliance',
+    title: 'Shaping a Europe of All Peoples - European Free Alliance',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
       { name: 'format-detection', content: 'telephone=no' },
+      { hid: 'keywords', name: 'keywords', content: 'CoFoE, europe, peoples, future, proposals, self-determination, efa, european free alliance' },
+      { hid: 'robots', name: 'robots', content: 'index, follow' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'twitter:site', property: 'twitter:site', content: '@EFAparty' },
+      { hid: 'twitter:card', property: 'twitter:card', content: 'summary_large_image' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: 'https://e-f-a.org/wp-content/themes/efa/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -55,12 +59,17 @@ export default {
   // i18n
   i18n: {
     locales: [
+      { code: 'de', file: 'de.js', name: 'Deutsch' },
       { code: 'en', file: 'en.js', name: 'English' },
+      { code: 'es', file: 'es.js', name: 'Español' },
       { code: 'fr', file: 'fr.js', name: 'Français' },
-      { code: 'es', file: 'es.js', name: 'Español' }
+      { code: 'it', file: 'it.js', name: 'Italiano' },
+      { code: 'nl', file: 'nl.js', name: 'Nederlands' },
     ],
     defaultLocale: 'en',
     lazy: true,
     langDir: 'lang/',
-  }
+  },
+
+  eslint: { cache: false, }
 }

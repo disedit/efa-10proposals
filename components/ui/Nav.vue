@@ -21,7 +21,8 @@
         <img src="~assets/logos/logo-en.svg" :alt="$t('global.EFA')" class="w-logo-full md:w-logo-full-lg max-w-none" />
       </nuxt-link>
 
-      <span
+      <nuxt-link
+        to="/"
         :class="[
           'font-semibold text-sm md:text-lg transition mr-2 leading-none',
           {
@@ -30,7 +31,7 @@
           }
         ]">
         {{ $t('global.title') }}
-      </span>
+      </nuxt-link>
 
       <UiLanguageSwitcher class="ml-auto" />
     </UiContainer>
@@ -47,7 +48,12 @@
     },
 
     mounted () {
-      window.addEventListener('scroll', this.handleScroll)
+      if (this.$route.path !== '/') {
+        this.scrolled = true
+        this.scrolledPastFold = true
+      } else {
+        window.addEventListener('scroll', this.handleScroll)
+      }
     },
 
     methods: {
