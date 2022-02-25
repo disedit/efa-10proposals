@@ -19,7 +19,7 @@
         </i18n>
       </div>
     </UiContainer>
-    <div class="absolute flex left-0 top-0 right-0 bottom-0 z-10 overflow-hidden pointer-events-none">
+    <div class="absolute flex inset-0 z-10 overflow-hidden pointer-events-none">
       <img src="~assets/images/map-2.png" class="h-full w-full grayscale mix-blend-multiply object-contain object-right-top opacity-25 max-w-none" alt="" />
     </div>
   </header>

@@ -36,6 +36,17 @@ export default {
     explainer: 'Instructions',
     seeall: 'See all 10 proposals'
   },
+  explainer: {
+    intro: 'The process of endorsing a proposal is as follows:',
+    list: [
+      'First, register an “EU Login” account by going to {0} and clicking the link to register',
+      'Follow the instructions to also set up an account on the CoFoE platform.',
+      'Navigate to the proposal you want to support by using the links on this page.',
+      'Click ‘Endorse’ to add your vote to the proposal. You can also leave a comment if you wish.',
+    ],
+    translation: 'The platform uses <strong>automatic translation</strong> so you can participate in any EU official language. You <strong>do not need to be based in an EU member state</strong> to make an endorsement or comment.',
+    thanks: 'Thank you for being part of the debate!'
+  },
   footer: {
     euparl: 'With Financial Support of the European Parliament. The information on this website concerns only the author, the European Parliament is not responsible for the use and content of the information.',
     follow: 'Follow us',

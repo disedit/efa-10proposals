@@ -4,6 +4,12 @@
     <UiNav />
     <Nuxt />
     <UiFooter />
+    <UiModal id="explainer">
+      <SectionProposalExplainer />
+    </UiModal>
+    <UiModal id="share">
+      <SectionProposalShare />
+    </UiModal>
   </div>
 </template>
 

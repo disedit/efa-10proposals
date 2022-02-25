@@ -22,12 +22,23 @@
           <nuxt-content :document="proposal" />
         </SectionProposalCard>
         <div class="col-span-8 flex">
-          <SectionProposalButton :href="proposal.link" target="_blank" rel="noopener" class="grow relative z-10 focus:x-20">
+          <SectionProposalButton
+            :href="proposal.link"
+            target="_blank"
+            rel="noopener noreferer"
+            class="grow relative z-10 focus:x-20"
+          >
             {{ $t('proposal.support') }}
             <IconEndorse />
             <span class="sr-only">{{ $t('global.newwindow') }}</span>
           </SectionProposalButton>
-          <SectionProposalButton tag="button" class="group relative focus:z-20" no-padding @click="showExplainer">
+          <SectionProposalButton
+            :id="'explainer' + proposal.number"
+            tag="button"
+            class="group relative focus:z-20"
+            no-padding
+            @click="showExplainer"
+          >
             <div class="border-l border-l-purple/25 px-4 py-3">
               <IconQuestion style="--rotate: 5deg" />
             </div>
@@ -36,7 +47,12 @@
             </div>
           </SectionProposalButton>
         </div>
-        <SectionProposalButton tag="button" class="col-span-4" @click="shareProposal">
+        <SectionProposalButton
+          :id="'share' + proposal.number"
+          tag="button"
+          class="col-span-4"
+          @click="shareProposal"
+        >
           {{ $t('proposal.share') }}
           <IconShare style="--rotate: 5deg" />
         </SectionProposalButton>
@@ -71,7 +87,10 @@
 
     methods: {
       showExplainer () {
-        this.$root.$emit('showExplainer', true)
+        this.$root.$emit('showModal', 'explainer', {
+          title: this.$t('proposal.explainer'),
+          focusBackTo: '#explainer' + this.proposal.number
+        })
       },
 
       async shareProposal () {
@@ -85,7 +104,11 @@
         try {
           await navigator.share(shareData)
         } catch(err) {
-          this.$root.$emit('showShareDialog', shareData)
+          this.$root.$emit('showModal', 'share', {
+            title: this.$t('proposal.share'),
+            focusBackTo: '#share' + this.proposal.number,
+            payload: shareData
+          })
         }
       }
     }
