@@ -1,5 +1,6 @@
 <template>
-  <span
+  <nuxt-link
+    :to="localePath('proposal/' + number)"
     :class="[
       'text-8xl text-white font-semibold leading-none',
       'md:absolute md:text-9xl lg:text-number md:p-8',
@@ -18,7 +19,7 @@
     >
       <span class="md:hidden">#</span>{{ number }}
     </div>
-  </span>
+  </nuxt-link>
 </template>
 
 <script>

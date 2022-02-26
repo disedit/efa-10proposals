@@ -71,5 +71,21 @@ export default {
     langDir: 'lang/',
   },
 
-  eslint: { cache: false, }
+  eslint: { cache: false, },
+
+  generate: {
+    routes () {
+      const locales = ['de', 'es', 'fr', 'it', 'nl']
+      const routes = []
+
+      for (let n = 1; n <= 10; n++) {
+        routes.push('/proposal/' + n)
+        for (const locale of locales) {
+          routes.push(locale + '/proposal/' + n)
+        }
+      }
+
+      return routes
+    }
+  }
 }
