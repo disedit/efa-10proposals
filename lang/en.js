@@ -7,7 +7,7 @@ export default {
     newwindow: '(opens in a new window)'
   },
   meta: {
-    description: '10 Proposals for the Conference on the Future of Europe',
+    description: '@:hero.subtitle',
     thumbnail: '/ogimage_en.png',
     url: ''
   },
@@ -19,27 +19,28 @@ export default {
     subtitle: '10 Proposals for the Conference on the Future of Europe',
     introduction: {
       paragraphs: [
-        `{0} ({1}) is an opportunity for Europeans to make their voices heard.
-        The {2} is contributing to this debate with 10 proposals for an EU that
+        `The {0} ({1}) is an opportunity for Europeans to {2}.
+        The {3} is contributing to this debate with {4} for an EU that
         truly reflects the continent’s cultural diversity.`,
         `We invite you to read, share and comment on these proposals,
-        and to endorse them on the official #CoFoE online platform! {0}`
+        and to {0} them on the official #CoFoE online platform! {1}`
       ],
-      conference: 'The Conference on the Future of Europe',
+      emphasis: ['make their voices heard', '10 proposals', 'endorse'],
+      conference: 'Conference on the Future of Europe',
       hashtags: ['#CoFoE', '#TheFutureIsYours'],
       EFA: '@:global.EFA'
     },
   },
   proposal: {
-    support: 'Support this proposal',
+    support: 'Endorse Proposal',
     share: 'Share',
-    explainer: 'Instructions',
+    explainer: 'How to endorse a proposal',
     seeall: 'See all 10 proposals'
   },
   explainer: {
     intro: 'The process of endorsing a proposal is as follows:',
     list: [
-      'First, register an “EU Login” account by going to {0} and clicking the link to register',
+      'First, register an “EU Login” account by going to {0} and clicking the link to register.',
       'Follow the instructions to also set up an account on the CoFoE platform.',
       'Navigate to the proposal you want to support by using the links on this page.',
       'Click ‘Endorse’ to add your vote to the proposal. You can also leave a comment if you wish.',

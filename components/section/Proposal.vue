@@ -28,8 +28,8 @@
             rel="noopener noreferer"
             class="grow relative z-10 focus:x-20"
           >
+            <IconEndorse class="ml-0 mr-4" />
             {{ $t('proposal.support') }}
-            <IconEndorse />
             <span class="sr-only">{{ $t('global.newwindow') }}</span>
           </SectionProposalButton>
           <SectionProposalButton
@@ -42,7 +42,7 @@
             <div class="border-l border-l-purple/25 px-4 py-3">
               <IconQuestion style="--rotate: 5deg" />
             </div>
-            <div class="group-hover:opacity-100 opacity-0 bg-black/90 py-1 px-2 rounded text-white absolute text-xs font-normal transition translate-x-12 pointer-events-none">
+            <div class="group-hover:opacity-100 w-24 opacity-0 bg-black/90 py-1 px-2 rounded text-white absolute text-xs font-normal transition translate-x-12 pointer-events-none">
               {{ $t('proposal.explainer') }}
             </div>
           </SectionProposalButton>
@@ -54,7 +54,7 @@
           @click="shareProposal"
         >
           {{ $t('proposal.share') }}
-          <IconShare style="--rotate: 5deg" />
+          <IconShare class="ml-auto" style="--rotate: 5deg" />
         </SectionProposalButton>
       </div>
     </UiContainer>

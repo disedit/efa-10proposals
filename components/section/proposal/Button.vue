@@ -33,7 +33,6 @@ export default {
   color: currentcolor;
   height: 1.25em;
   width: 1.25em;
-  margin-left: auto;
   transition: .25s cubic-bezier(.175,.885,.32,1.275);
   flex-shrink: 0;
 }

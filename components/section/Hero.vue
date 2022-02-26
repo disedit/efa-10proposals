@@ -12,9 +12,12 @@
         <i18n path="hero.introduction.paragraphs[0]" tag="p" class="mb-4">
           <a href="https://futureu.europa.eu/" target="_blank" rel="noopener noreferer">{{ $t('hero.introduction.conference') }}</a>
           <a href="https://twitter.com/search?q=%23CoFoE" target="_blank" rel="noopener noreferer">{{ $t('hero.introduction.hashtags[0]') }}</a>
+          <strong>{{ $t('hero.introduction.emphasis[0]') }}</strong>
           <a href="https://e-f-a.org" target="_blank" rel="noopener noreferer">{{ $t('hero.introduction.EFA') }}</a>
+          <strong>{{ $t('hero.introduction.emphasis[1]') }}</strong>
         </i18n>
         <i18n path="hero.introduction.paragraphs[1]" tag="p">
+          <strong>{{ $t('hero.introduction.emphasis[2]') }}</strong>
           <a href="https://twitter.com/hashtag/thefutureisyours" target="_blank" rel="noopener noreferer">{{ $t('hero.introduction.hashtags[1]') }}</a>
         </i18n>
       </div>
