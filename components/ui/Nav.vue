@@ -9,7 +9,7 @@
     ]">
     <UiContainer class="flex items-center">
       <nuxt-link
-        to="/"
+        :to="localePath('/')"
         :class="[
           'block mr-2 overflow-hidden transition-all shrink-0',
           'focus:ring focus:outline-none ring-orange/50 ring-offset-2 ring-offset-purple',
@@ -22,7 +22,7 @@
       </nuxt-link>
 
       <nuxt-link
-        to="/"
+        :to="localePath('/')"
         :class="[
           'font-semibold text-sm md:text-lg transition mr-2 leading-none',
           {
@@ -48,7 +48,7 @@
     },
 
     mounted () {
-      if (this.$route.path !== '/') {
+      if (this.$route.path.includes('proposal')) {
         this.scrolled = true
         this.scrolledPastFold = true
       } else {

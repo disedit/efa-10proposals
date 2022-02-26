@@ -1,6 +1,6 @@
 <template>
   <section class="proposal relative md:min-h-screen bg-purple text-white py-7">
-    <SectionProposalBackground :image="proposal.image" />
+    <ProposalBackground :image="proposal.image" />
     <UiContainer
       class="rellax relative z-40"
       data-rellax-speed="0"
@@ -17,12 +17,12 @@
           }
         ]"
       >
-        <SectionProposalNumber :number="proposal.number" />
-        <SectionProposalCard class="col-span-12">
+        <ProposalNumber :number="proposal.number" />
+        <ProposalCard class="col-span-12">
           <nuxt-content :document="proposal" />
-        </SectionProposalCard>
+        </ProposalCard>
         <div class="col-span-8 flex">
-          <SectionProposalButton
+          <ProposalButton
             :href="proposal.link"
             target="_blank"
             rel="noopener noreferer"
@@ -31,8 +31,8 @@
             <IconEndorse class="ml-0 mr-4" />
             {{ $t('proposal.support') }}
             <span class="sr-only">{{ $t('global.newwindow') }}</span>
-          </SectionProposalButton>
-          <SectionProposalButton
+          </ProposalButton>
+          <ProposalButton
             :id="'explainer' + proposal.number"
             tag="button"
             class="group relative focus:z-20"
@@ -45,17 +45,17 @@
             <div class="group-hover:opacity-100 w-24 opacity-0 bg-black/90 py-1 px-2 rounded text-white absolute text-xs font-normal transition translate-x-12 pointer-events-none">
               {{ $t('proposal.explainer') }}
             </div>
-          </SectionProposalButton>
+          </ProposalButton>
         </div>
-        <SectionProposalButton
+        <ProposalButton
           :id="'share' + proposal.number"
           tag="button"
           class="col-span-4"
           @click="shareProposal"
         >
-          {{ $t('proposal.share') }}
+          <span class="mr-2">{{ $t('proposal.share') }}</span>
           <IconShare class="ml-auto" style="--rotate: 5deg" />
-        </SectionProposalButton>
+        </ProposalButton>
       </div>
     </UiContainer>
   </section>
@@ -96,9 +96,9 @@
       async shareProposal () {
         const { proposal } = this
         const shareData = {
-          title: `#${proposal.number}: ${proposal.title} - ${this.$t('globa.title')} - ${this.$t('global.EFA')}`,
+          title: `#${proposal.number}: ${proposal.title} - ${this.$t('global.title')} - ${this.$t('global.EFA')}`,
           text: proposal.title,
-          url: 'https://10proposals.e-f-a.org/proposal/' + this.proposal.number
+          url: this.$t('meta.url') + '/proposal/' + this.proposal.number
         }
 
         try {

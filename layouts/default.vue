@@ -5,10 +5,12 @@
     <Nuxt />
     <UiFooter />
     <UiModal id="explainer">
-      <SectionProposalExplainer />
+      <ProposalExplainer />
     </UiModal>
     <UiModal id="share">
-      <SectionProposalShare />
+      <template slot-scope="{ payload }">
+        <ProposalShare :payload="payload" />
+      </template>
     </UiModal>
   </div>
 </template>

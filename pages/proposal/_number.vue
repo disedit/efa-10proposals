@@ -1,8 +1,8 @@
 <template>
   <main id="main">
-    <SectionProposal :proposal="proposal" class="pt-32" />
+    <Proposal :proposal="proposal" class="pt-32" />
     <nuxt-link
-      to="/"
+      :to="localePath('/')"
       class="
         block hover:text-white hover:bg-orange text-3xl md:text-4xl
         py-6 px-2 bg-white text-purple

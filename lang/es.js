@@ -9,7 +9,7 @@ export default {
   meta: {
     description: '@:hero.subtitle',
     thumbnail: '/ogimage_en.png',
-    url: ''
+    url: 'https://efa-10proposals.netlify.app/es'
   },
   hero: {
     title: [
@@ -35,7 +35,9 @@ export default {
     support: 'Suscribir la propuesta',
     share: 'Compartir',
     explainer: 'Cómo suscribir una propuesta',
-    seeall: 'Ver todas las 10 propuestas'
+    seeall: 'Ver todas las 10 propuestas',
+    copy: 'Copiar enlace',
+    copied: '¡Copiado!'
   },
   explainer: {
     intro: 'El proceso para subir las propuestas es el siguiente:',

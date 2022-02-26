@@ -1,6 +1,12 @@
 <template>
   <transition name="modal">
-    <div v-if="open" class="fixed flex inset-0 bg-black/50 z-100 p-3 items-center justify-center transition">
+    <div
+      v-if="open"
+      class="
+        fixed flex inset-0 bg-black/50 z-100 p-3
+        items-end md:items-center justify-center
+        transition overflow-scroll"
+    >
       <div
         ref="dialog"
         tabindex="0"
@@ -20,7 +26,7 @@
         </header>
 
         <section id="modalDescription">
-          <slot />
+          <slot :payload="payload" />
         </section>
       </div>
       <button class="fixed inset-0 z-10 transition" @click="closeModal">
