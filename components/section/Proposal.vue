@@ -13,7 +13,7 @@
           {
             'mr-auto': isEven,
             'ml-auto': !isEven,
-            '-translate-y-[15%]': proposal.number === 1
+            '-translate-y-[15%]': proposal.number === 1 && !$route.params.number
           }
         ]"
       >
