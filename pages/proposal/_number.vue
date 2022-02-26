@@ -1,6 +1,6 @@
 <template>
   <main id="main">
-    <Proposal :proposal="proposal" class="pt-32" />
+    <SectionProposal :proposal="proposal" class="pt-32" />
     <nuxt-link
       :to="localePath('/')"
       class="
