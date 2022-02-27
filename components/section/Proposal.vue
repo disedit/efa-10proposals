@@ -122,7 +122,7 @@
           duration: 1,
           scrollTrigger: {
             trigger: `#Card${this.proposal.number}`,
-            start: 'top 50%'
+            start: 'top 60%'
           }
         })
 

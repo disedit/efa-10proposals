@@ -19,13 +19,27 @@
 import Rellax from 'rellax'
 
 export default {
+  data () {
+    return {
+      rellax: null
+    }
+  },
+
   head () {
     return this.$nuxtI18nHead()
   },
 
+  watch: {
+    '$route' () {
+      this.rellax.destroy()
+      setTimeout(() => {
+        this.rellax = new Rellax('.rellax')
+      }, 1000)
+    }
+  },
+
   mounted () {
-    // eslint-disable-next-line
-    const rellax = new Rellax('.rellax')
+    this.rellax = new Rellax('.rellax')
   }
 }
 </script>
