@@ -8,7 +8,7 @@ export default {
   },
   meta: {
     description: '@:hero.subtitle',
-    thumbnail: '/ogimage_en.png',
+    thumbnail: '/images/thumbnails/home_en.png',
     url: 'https://efa-10proposals.netlify.app'
   },
   hero: {

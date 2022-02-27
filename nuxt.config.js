@@ -7,11 +7,13 @@ export default {
     title: 'Shaping a Europe of All Peoples - European Free Alliance',
     htmlAttrs: {
       lang: 'en',
+      class: 'bg-purple'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
       { name: 'format-detection', content: 'telephone=no' },
+      { name: 'theme-color', content: '#80379b'},
       { hid: 'keywords', name: 'keywords', content: 'CoFoE, europe, peoples, future, proposals, self-determination, efa, european free alliance' },
       { hid: 'robots', name: 'robots', content: 'index, follow' },
       { hid: 'og:type', property: 'og:type', content: 'website' },

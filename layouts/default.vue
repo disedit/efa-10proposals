@@ -1,6 +1,5 @@
 <template>
-  <div class="bg-purple overflow-hidden">
-    <UiSkipToContent />
+  <div class="overflow-hidden">
     <UiNav />
     <Nuxt />
     <UiFooter />
