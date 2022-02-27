@@ -22,7 +22,7 @@
         <ProposalCard :id="`Card${proposal.number}`" class="col-span-12">
           <nuxt-content :document="proposal" />
         </ProposalCard>
-        <div :id="`Endorse${proposal.number}`" class="col-span-8 flex">
+        <div :id="`Endorse${proposal.number}`" class="col-span-8 flex z-10">
           <ProposalButton
             :href="proposal.link"
             target="_blank"
