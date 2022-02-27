@@ -40,6 +40,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://www.npmjs.com/package/nuxt-gsap-module
+    'nuxt-gsap-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -71,5 +73,11 @@ export default {
     langDir: 'lang/',
   },
 
-  eslint: { cache: false }
+  eslint: { cache: false },
+
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true
+    }
+  }
 }

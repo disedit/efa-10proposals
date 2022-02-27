@@ -28,7 +28,7 @@
         />
         <button
           :class="[
-            'text-sm border border-gray-mid/50 text-gray-mid py-2 px-3 -ml-px focus:outline-none focus:ring whitespace-nowrap w-24',
+            'text-sm border border-gray-mid/50 text-gray-mid py-2 px-3 -ml-px focus:outline-none focus:ring whitespace-nowrap text-center min-w-[125px]',
             { 'hover:border-purple hover:text-purple focus:ring-purple/25 focus:border-purple focus:text-purple': !copied },
             { 'text-[#25d366] border-[#25d366] bg-[#25d366]/10': copied }
           ]"

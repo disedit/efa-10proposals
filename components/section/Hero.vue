@@ -1,14 +1,14 @@
 <template>
   <header class="relative flex min-h-screen bg-purple text-white items-center">
     <UiContainer class="relative z-20 py-nav">
-      <h1 class="text-title font-semibold leading-none">
+      <h1 id="HeroTitle" class="text-title font-semibold leading-none">
         {{ $t('hero.title[0]') }}<br>
         {{ $t('hero.title[1]') }}
       </h1>
-      <p class="mt-4 mb-8 text-2xl md:text-3xl leading-tight">
+      <p id="HeroSubtitle" class="mt-4 mb-8 text-2xl md:text-3xl leading-tight">
         {{ $t('hero.subtitle') }}
       </p>
-      <div class="text-xl introduction max-w-xl">
+      <div id="HeroText" class="text-xl introduction max-w-xl">
         <i18n path="hero.introduction.paragraphs[0]" tag="p" class="mb-4">
           <a href="https://futureu.europa.eu/" target="_blank" rel="noopener noreferer">{{ $t('hero.introduction.conference') }}</a>
           <a href="https://twitter.com/search?q=%23CoFoE" target="_blank" rel="noopener noreferer">{{ $t('hero.introduction.hashtags[0]') }}</a>
@@ -29,7 +29,36 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    mounted () {
+      this.animateText()
+    },
+
+    methods: {
+      animateText () {
+        const tl = this.$gsap.timeline()
+          tl.from('#HeroTitle', {
+            opacity: 0,
+            duration: 1.5,
+            y: 20
+          })
+          .from('#HeroSubtitle', {
+            opacity: 0,
+            y: 20,
+            duration: 1
+          }, '-=1')
+          .from('#HeroText', {
+            opacity: 0,
+            y: 20,
+            duration: .75
+          }, '-=0.5')
+          .from('#Nav', {
+            opacity: 0,
+            duration: .75
+          }, '-=0.75')
+      }
+    }
+  }
 </script>
 
 <style>

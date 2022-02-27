@@ -13,15 +13,16 @@
           {
             'mr-auto': isEven,
             'ml-auto': !isEven,
-            '-translate-y-[15%]': proposal.number === 1 && !$route.params.number
+            '-translate-y-[15%]': proposal.number === 1 && !$route.params.number,
+            'translate-y-[25%]': proposal.number === 6 && !$route.params.number
           }
         ]"
       >
-        <ProposalNumber :number="proposal.number" />
-        <ProposalCard class="col-span-12">
+        <ProposalNumber :id="`Number${proposal.number}`" :number="proposal.number" />
+        <ProposalCard :id="`Card${proposal.number}`" class="col-span-12">
           <nuxt-content :document="proposal" />
         </ProposalCard>
-        <div class="col-span-8 flex">
+        <div :id="`Buttons${proposal.number}`" class="col-span-8 flex">
           <ProposalButton
             :href="proposal.link"
             target="_blank"
@@ -85,7 +86,45 @@
       }
     },
 
+    mounted () {
+      this.animateCard()
+    },
+
     methods: {
+      animateCard () {
+        this.$gsap.fromTo(`#Card${this.proposal.number}`, {
+          opacity: 0,
+          scale: 1.1,
+          rotate: this.isEven ? '-10deg' : '10deg',
+          x: this.isEven ? -100 : 100
+        }, {
+          opacity: 1,
+          rotate: 0,
+          scale: 1,
+          x: 0,
+          duration: 0.5,
+          delay: this.proposal.number === 1 ? 1.25 : 0,
+          scrollTrigger: this.proposal.number !== 1 ?{
+            trigger: `#Card${this.proposal.number}`,
+            start: 'top 80%'
+          } : null,
+          onComplete: () => {
+            const card = document.querySelector(`#Card${this.proposal.number}`)
+            card.classList.add('highlight')
+          }
+        })
+
+        this.$gsap.fromTo(`#Number${this.proposal.number}`, {
+          opacity: 0
+        }, {
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: `#Card${this.proposal.number}`,
+            start: 'top 50%'
+          }
+        })
+      },
       showExplainer () {
         this.$root.$emit('showModal', 'explainer', {
           title: this.$t('proposal.explainer'),

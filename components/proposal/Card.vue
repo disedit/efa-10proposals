@@ -10,7 +10,20 @@
   }
 
   .card h2 strong {
-    @apply underline decoration-orange font-semibold;
+    @apply font-semibold bg-gradient-to-r from-orange to-orange;
+
+    background-size: 0 .15em;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 1s;
+  }
+
+  .card h2 strong:nth-child(3) {
+    transition-delay: .75s;
+  }
+
+  .card.highlight h2 strong {
+    background-size: 100% .15em;
   }
 
   .card p {
