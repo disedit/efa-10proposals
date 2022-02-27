@@ -5,7 +5,7 @@
       'fixed w-full left-0 right-0 top-0',
       'text-white py-3 transition z-50',
       {
-        'bg-purple/75 backdrop-blur-lg': scrolled
+        'scrolled bg-purple/75 backdrop-blur-lg': scrolled
       }
     ]">
     <UiContainer class="flex items-center">
@@ -67,3 +67,9 @@
     }
   }
 </script>
+
+<style scoped>
+.scrolled {
+  backdrop-filter: blur(16px);
+}
+</style>
