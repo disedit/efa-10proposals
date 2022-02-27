@@ -5,7 +5,6 @@
       v-for="proposal in proposals"
       :key="proposal.number"
       :proposal="proposal"
-      class="my-3"
     />
   </main>
 </template>

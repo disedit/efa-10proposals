@@ -1,11 +1,11 @@
 <template>
   <main id="main">
-    <SectionProposal :proposal="proposal" class="pt-32" />
+    <SectionProposal :proposal="proposal" class="mt-12 pt-32" />
     <nuxt-link
       :to="localePath('/')"
       class="
         block hover:text-white hover:bg-orange text-3xl md:text-4xl
-        py-6 px-2 bg-white text-purple
+        py-6 px-2 bg-white text-purple md:mx-9
       "
     >
       <UiContainer class="flex items-center">

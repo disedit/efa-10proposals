@@ -19,7 +19,7 @@ module.exports = {
       fontSize: {
         number: '15rem'
       },
-      padding: {
+      spacing: {
         nav: '6rem'
       },
       maxWidth: {
