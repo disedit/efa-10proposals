@@ -27,7 +27,9 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    './plugins/router.js'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -71,6 +73,7 @@ export default {
     defaultLocale: 'en',
     lazy: true,
     langDir: 'lang/',
+    skipSettingLocaleOnNavigate: true,
   },
 
   eslint: { cache: false },
