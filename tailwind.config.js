@@ -17,17 +17,10 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        title: 'calc(2.5rem + 2.5vw)',
         number: '15rem'
       },
       padding: {
-        nav: '5rem'
-      },
-      width: {
-        'logo-full': '6rem',
-        'logo-mini': '3rem',
-        'logo-full-lg': '8.25rem',
-        'logo-mini-lg': '4.25rem'
+        nav: '6rem'
       },
       maxWidth: {
         card: '30rem'

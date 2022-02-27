@@ -1,8 +1,8 @@
 <template>
   <header class="relative flex min-h-screen bg-purple text-white items-center">
     <UiContainer class="relative z-20 py-nav">
-      <h1 id="HeroTitle" class="opacity-0 translate-y-[20px] text-title font-semibold leading-none">
-        {{ $t('hero.title[0]') }}<br>
+      <h1 id="HeroTitle" class="opacity-0 translate-y-[20px] text-7xl xl:text-8xl font-semibold leading-none">
+        {{ $t('hero.title[0]') }}<br class="hidden md:inline">
         {{ $t('hero.title[1]') }}
       </h1>
       <p id="HeroSubtitle" class="opacity-0 translate-y-[20px] mt-4 mb-8 text-2xl md:text-3xl leading-tight">
@@ -22,8 +22,8 @@
         </i18n>
       </div>
     </UiContainer>
-    <div class="absolute flex inset-0 z-10 overflow-hidden pointer-events-none">
-      <img src="~assets/images/map-2.png" class="h-full w-full grayscale mix-blend-multiply object-contain object-right-top opacity-25 max-w-none" alt="" />
+    <div class="background absolute flex inset-0 z-10 overflow-hidden pointer-events-none bg-purple">
+      <img src="~assets/images/map-grayscale.png" class="h-full w-full object-contain object-right-top max-w-none pointer-events-none mix-blend-screen opacity-25" alt="" />
     </div>
   </header>
 </template>
@@ -52,8 +52,8 @@
             y: 0,
             duration: .75
           }, '-=0.5')
-          .to('#Nav', {
-            opacity: 1,
+          .from('#Nav', {
+            opacity: 0,
             duration: .75
           }, '-=0.75')
       }
