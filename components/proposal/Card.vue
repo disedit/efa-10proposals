@@ -1,5 +1,5 @@
 <template>
-  <article class="card bg-white text-black shadow-xl p-5">
+  <article class="opacity-0 card bg-white text-black shadow-xl p-5">
     <slot />
   </article>
 </template>

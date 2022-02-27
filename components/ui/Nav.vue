@@ -2,7 +2,7 @@
   <nav
     id="Nav"
     :class="[
-      'fixed w-full left-0 right-0 top-0',
+      'opacity-0 fixed w-full left-0 right-0 top-0',
       'text-white py-3 transition z-50',
       {
         'bg-purple/75 backdrop-blur-lg': scrolled
