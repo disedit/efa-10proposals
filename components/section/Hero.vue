@@ -1,5 +1,5 @@
 <template>
-  <header class="relative flex min-h-screen bg-purple text-white items-center">
+  <header class="relative flex min-h-[90vh] md:min-h-screen bg-purple text-white items-center">
     <UiContainer class="relative z-20 py-nav">
       <h1 id="HeroTitle" class="opacity-0 translate-y-[20px] text-7xl xl:text-8xl font-semibold leading-none">
         {{ $t('hero.title[0]') }}<br class="hidden md:inline">
