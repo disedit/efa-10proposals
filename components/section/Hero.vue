@@ -52,10 +52,6 @@
             y: 0,
             duration: .75
           }, '-=0.5')
-          .from('#Nav', {
-            opacity: 0,
-            duration: .75
-          }, '-=0.75')
       }
     }
   }

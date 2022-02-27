@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="grid md:grid-cols-2 gap-4 mt-10 items-end">
-        <div class="flex text-sm leading-tight font-semibold">
+        <div class="flex text-sm leading-tight">
           <img src="~assets/logos/ep.svg" alt="European Parliament" class="w-24 mr-4 shrink-0">
           <span>{{ $t('footer.euparl') }}</span>
         </div>
