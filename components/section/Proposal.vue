@@ -14,7 +14,7 @@
             'mr-auto': isEven,
             'ml-auto': !isEven,
             '-translate-y-[15%]': proposal.number === 1 && !$route.params.number,
-            'translate-y-[25%]': proposal.number === 6 && !$route.params.number
+            'md:translate-y-[25%]': proposal.number === 6 && !$route.params.number
           }
         ]"
       >
@@ -22,7 +22,7 @@
         <ProposalCard :id="`Card${proposal.number}`" class="col-span-12">
           <nuxt-content :document="proposal" />
         </ProposalCard>
-        <div :id="`Buttons${proposal.number}`" class="col-span-8 flex">
+        <div :id="`Endorse${proposal.number}`" class="col-span-8 flex">
           <ProposalButton
             :href="proposal.link"
             target="_blank"
@@ -102,7 +102,8 @@
           rotate: 0,
           scale: 1,
           x: 0,
-          duration: 0.5,
+          duration: .75,
+          ease: 'Back.easeOut',
           delay: this.proposal.number === 1 ? 1.25 : 0,
           scrollTrigger: this.proposal.number !== 1 ?{
             trigger: `#Card${this.proposal.number}`,
@@ -122,6 +123,39 @@
           scrollTrigger: {
             trigger: `#Card${this.proposal.number}`,
             start: 'top 50%'
+          }
+        })
+
+        this.$gsap.fromTo(`#Endorse${this.proposal.number}`, {
+          opacity: 0,
+          rotate: '-4deg',
+          scale: 1.2
+        }, {
+          opacity: 1,
+          rotate: 0,
+          scale: 1,
+          duration: 0.5,
+          ease: 'Back.easeOut',
+          scrollTrigger: {
+            trigger: `#Endorse${this.proposal.number}`,
+            start: 'top bottom'
+          }
+        })
+
+        this.$gsap.fromTo(`#share${this.proposal.number}`, {
+          opacity: 0,
+          rotate: '4deg',
+          scale: 1.1
+        }, {
+          opacity: 1,
+          rotate: 0,
+          scale: 1,
+          duration: 0.5,
+          ease: 'Back.easeOut',
+          delay: .5,
+          scrollTrigger: {
+            trigger: `#share${this.proposal.number}`,
+            start: 'top bottom'
           }
         })
       },

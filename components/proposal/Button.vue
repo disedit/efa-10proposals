@@ -3,9 +3,9 @@
     :is="tag"
     :class="[
       'button flex items-center bg-white text-purple shadow-xl',
-      'font-semibold text-lg',
+      'font-semibold text-lg leading-none',
       'focus:outline-none focus:ring ring-orange/75 ring-offset-purple',
-      { 'p-5': !noPadding }
+      { 'py-4 px-4': !noPadding }
     ]"
     @click="$emit('click')">
     <slot />
