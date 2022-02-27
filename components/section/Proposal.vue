@@ -151,6 +151,7 @@
           rotate: 0,
           scale: 1,
           duration: 0.5,
+          delay: 0.25,
           ease: 'Back.easeOut',
           scrollTrigger: {
             trigger: `#share${this.proposal.number}`,
