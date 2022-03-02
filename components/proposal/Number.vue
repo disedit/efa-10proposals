@@ -9,7 +9,7 @@
         'md:right-0 md:translate-x-full': isEven,
       }
     ]"
-    :style="translate"
+    :style="compensateForParallax"
   >
     <div
       class="rellax"
@@ -36,7 +36,9 @@ export default {
       return this.number % 2 === 0
     },
 
-    translate() {
+    compensateForParallax () {
+      if (this.$route.params.number) return
+
       const { number } = this
       const maxNumber = 10
       const min = 40

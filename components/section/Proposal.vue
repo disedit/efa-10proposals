@@ -2,7 +2,7 @@
   <section class="proposal relative md:min-h-screen bg-purple text-white py-7">
     <ProposalBackground :image="proposal.image" />
     <UiContainer
-      class="rellax relative z-40"
+      class="rellax relative z-40 py-3"
       data-rellax-speed="0"
       :data-rellax-tablet-speed="parallaxSpeed"
       :data-rellax-desktop-speed="parallaxSpeed"
