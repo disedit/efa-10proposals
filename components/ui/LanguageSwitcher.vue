@@ -10,6 +10,7 @@
         :key="locale.code"
         :selected="locale.code === $i18n.locale"
         :value="locale.code"
+        class="bg-purple"
       >
         {{ locale.name }}
       </option>

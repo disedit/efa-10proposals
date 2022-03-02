@@ -2,36 +2,35 @@
   <transition name="modal">
     <div
       v-if="open"
+      ref="dialog"
+      tabindex="-1"
+      aria-modal="true"
+      role="dialog"
       class="
-        fixed flex inset-0 bg-black/50 z-100 p-3
-        items-end md:items-center justify-center
-        transition overflow-scroll"
+        fixed inset-0 bg-black/50 z-100 p-3
+        transition overflow-y-auto overflow-x-hidden"
     >
+    <div class="flex items-end md:items-center min-h-full justify-center" @click="closeModal">
       <div
-        ref="dialog"
-        tabindex="0"
-        role="dialog"
         class="dialog relative bg-white w-full max-w-lg p-6 shadow-lg z-50"
-        aria-labelledby="modalTitle"
-        aria-describedby="modalDescription"
+        :aria-labelledby="id + 'modalTitle'"
+        :aria-describedby="id + 'modalDescription'"
       >
-        <header id="modalTitle" class="flex items-start text-purple mb-4">
+        <header :id="id + 'modalTitle'" class="flex items-start text-purple mb-4">
           <h2 class="font-semibold text-2xl">
             {{ title }}
           </h2>
           <button class="p-2 ml-auto focus:outline-none focus:ring ring-orange/50" @click="closeModal">
             <span class="sr-only">{{ $t('global.close') }}</span>
-            <IconClose class="h-5 w-5" />
+            <IconClose class="h-5 w-5 pointer-events-none" />
           </button>
         </header>
 
-        <section id="modalDescription">
+        <section :id="id + 'modalDescription'">
           <slot :payload="payload" />
         </section>
       </div>
-      <button class="fixed inset-0 z-10 transition" @click="closeModal">
-        <span class="sr-only">{{ $t('global.close') }}</span>
-      </button>
+    </div>
     </div>
   </transition>
 </template>
@@ -62,13 +61,16 @@ export default {
         this.focusBackTo = focusBackTo
         this.payload = payload
         document.documentElement.classList.add('overflow-hidden')
-        this.$nextTick(() => this.$refs.dialog.focus())
+        this.$nextTick(() => {
+          this.$refs.dialog.focus()
+        })
       }
     })
   },
 
   methods: {
-    closeModal () {
+    closeModal (e) {
+      if(e.target !== e.currentTarget) return
       this.open = false
       document.documentElement.classList.remove('overflow-hidden')
       this.$nextTick(() => {

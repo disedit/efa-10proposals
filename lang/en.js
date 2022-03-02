@@ -4,7 +4,8 @@ export default {
     EFA: 'European Free Alliance',
     language: 'Select your language',
     skip: 'Skip to main content',
-    newwindow: '(opens in a new window)'
+    newwindow: '(opens in a new window)',
+    close: 'Close'
   },
   meta: {
     description: '@:hero.subtitle',

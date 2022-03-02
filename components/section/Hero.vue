@@ -59,6 +59,6 @@
 
 <style>
 .introduction a {
-  @apply underline decoration-orange hover:decoration-white;
+  @apply underline text-orange hover:text-white;
 }
 </style>

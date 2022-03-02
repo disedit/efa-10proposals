@@ -4,7 +4,7 @@
     <ol class="list mb-4">
       <li>
         <i18n path="explainer.list[0]">
-          <a href="https://futureu.europa.eu/pages/getinvolved" target="_blank" rel="noopener noreferer" class="text-purple underline hover:decoration-orange">
+          <a href="https://futureu.europa.eu/pages/getinvolved" target="_blank" rel="noopener noreferer" class="text-purple underline hover:text-orange">
             https://futureu.europa.eu/pages/getinvolved
           </a>
         </i18n>
@@ -25,6 +25,13 @@ export default {}
 <style scoped>
 p:not(:last-child) {
   @apply mb-4;
+}
+
+a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .list {

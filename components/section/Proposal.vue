@@ -174,9 +174,9 @@
           url: this.$t('meta.url') + '/proposal/' + this.proposal.number
         }
 
-        try {
+        if (navigator.share) {
           await navigator.share(shareData)
-        } catch(err) {
+        } else {
           this.$root.$emit('showModal', 'share', {
             title: this.$t('proposal.share'),
             focusBackTo: '#share' + this.proposal.number,
