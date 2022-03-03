@@ -4,12 +4,12 @@ export default {
     EFA: 'European Free Alliance',
     language: 'Select your language',
     skip: 'Skip to main content',
-    newwindow: '(opens in a new window)'
+    newwindow: '(Opent in een nieuw venster)'
   },
   meta: {
     description: '@:hero.subtitle',
     thumbnail: '/ogimage_en.png',
-    url: 'https://efa-10proposals.netlify.app/nl'
+    url: 'https://tenproposals.e-f-a.org/nl'
   },
   hero: {
     title: [
@@ -32,12 +32,13 @@ export default {
     },
   },
   proposal: {
-    support: 'Endorse Proposal',
-    share: 'Share',
-    explainer: 'How to endorse a proposal',
-    seeall: 'See all 10 proposals',
-    copy: 'Copy Link',
-    copied: 'Copied!'
+    support: 'Voorstel goedkeuren',
+    share: 'Delen',
+    explainer: 'Hoe een voorstel te onderschrijven?',
+    seeall: 'Bekijk alle 10 voorstellen',
+    copy: ' Kopieer link',
+    copied: 'Gekopieerd!',
+    more_options: 'More options...',
   },
   explainer: {
     intro: 'The process of endorsing a proposal is as follows:',
@@ -52,8 +53,8 @@ export default {
   },
   footer: {
     euparl: 'With Financial Support of the European Parliament. The information on this website concerns only the author, the European Parliament is not responsible for the use and content of the information.',
-    follow: 'Follow us',
+    follow: 'Volg ons',
     contact: 'Contact',
-    privacy: 'Privacy Policy'
+    privacy: 'Privacybeleid'
   }
 }

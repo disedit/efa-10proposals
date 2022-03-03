@@ -4,12 +4,12 @@ export default {
     EFA: 'Europäische Freie Allianz',
     language: 'Select your language',
     skip: 'Skip to main content',
-    newwindow: '(opens in a new window)'
+    newwindow: '(Öffnet in einem neuen Fenster)'
   },
   meta: {
     description: '@:hero.subtitle',
     thumbnail: '/ogimage_en.png',
-    url: 'https://efa-10proposals.netlify.app/de'
+    url: 'https://tenproposals.e-f-a.org/de'
   },
   hero: {
     title: [
@@ -33,12 +33,13 @@ export default {
     },
   },
   proposal: {
-    support: 'Endorse Proposal',
-    share: 'Share',
-    explainer: 'How to endorse a proposal',
-    seeall: 'See all 10 proposals',
-    copy: 'Copy Link',
-    copied: 'Copied!'
+    support: 'Vorschlag unterstützen',
+    share: 'Teilen',
+    explainer: 'Wie man einen Vorschlag unterstützt',
+    seeall: 'Alle 10 Vorschläge anzeigen',
+    copy: 'Link kopieren',
+    copied: 'Kopiert!',
+    more_options: 'More options...',
   },
   explainer: {
     intro: 'So unterstützt man einen Vorschlag:',
@@ -56,8 +57,8 @@ export default {
   },
   footer: {
     euparl: 'With Financial Support of the European Parliament. The information on this website concerns only the author, the European Parliament is not responsible for the use and content of the information.',
-    follow: 'Follow us',
-    contact: 'Contact',
-    privacy: 'Privacy Policy'
+    follow: 'Folge uns',
+    contact: 'Kontakt',
+    privacy: 'Datenschutzbestimmungen'
   }
 }

@@ -168,19 +168,22 @@
 
       async shareProposal () {
         const { proposal } = this
-        const shareData = {
+        const payload = {
           title: `#${proposal.number}: ${proposal.title} - ${this.$t('global.title')} - ${this.$t('global.EFA')}`,
           text: proposal.title,
-          url: this.$t('meta.url') + '/proposal/' + this.proposal.number
+          url: this.$t('meta.url') + '/proposal/' + proposal.number,
+          image: proposal.image
         }
 
-        if (navigator.share) {
-          await navigator.share(shareData)
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+
+        if (isIOS && navigator.share) {
+          await navigator.share(payload)
         } else {
           this.$root.$emit('showModal', 'share', {
             title: this.$t('proposal.share'),
-            focusBackTo: '#share' + this.proposal.number,
-            payload: shareData
+            focusBackTo: '#share' + proposal.number,
+            payload
           })
         }
       }

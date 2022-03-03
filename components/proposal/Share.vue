@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h3 class="border border-gray-mid/50 text-gray-mid p-3 mb-4">
+    <h3 class="border border-gray-mid/50 text-gray-mid p-3 mb-4 flex">
+      <img :src="payload.image" alt="" class="rounded mr-3 w-20 object-cover" />
       {{ payload.text }}
     </h3>
     <div class="grid md:grid-cols-2 gap-4">
@@ -20,6 +21,9 @@
         <IconTelegram />
         Telegram
       </a>
+      <button v-if="canShare" class="col-span-2 p-4 font-semibold transition text-center text-gray-mid bg-white border border-gray-mid/50 w-full hover:border-purple hover:text-purple focus:ring-purple/25 focus:border-purple focus:text-purple" @click="share">
+        {{ $t('proposal.more_options') }}
+      </button>
       <div class="flex col-span-2">
         <input
           :value="payload.url"
@@ -57,6 +61,9 @@ export default {
   },
 
   computed: {
+    canShare () {
+      return !!navigator.share
+    },
     facebookUrl () {
       return `https://www.facebook.com/sharer/sharer.php?u=${this.payload.url}`
     },
@@ -81,6 +88,10 @@ export default {
       document.body.removeChild(input)
       this.copied = true
       setTimeout(() => { this.copied = false }, 2000)
+    },
+
+    async share () {
+      await navigator.share(this.payload)
     }
   }
 }

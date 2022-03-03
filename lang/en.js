@@ -10,7 +10,7 @@ export default {
   meta: {
     description: '@:hero.subtitle',
     thumbnail: '/images/thumbnails/home_en.png',
-    url: 'https://efa-10proposals.netlify.app'
+    url: 'https://tenproposals.e-f-a.org'
   },
   hero: {
     title: [
@@ -38,7 +38,8 @@ export default {
     explainer: 'How to endorse a proposal',
     seeall: 'See all 10 proposals',
     copy: 'Copy Link',
-    copied: 'Copied!'
+    copied: 'Copied!',
+    more_options: 'More options...',
   },
   explainer: {
     intro: 'The process of endorsing a proposal is as follows:',

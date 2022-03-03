@@ -9,7 +9,7 @@ export default {
   meta: {
     description: '@:hero.subtitle',
     thumbnail: '/ogimage_en.png',
-    url: 'https://efa-10proposals.netlify.app/es'
+    url: 'https://tenproposals.e-f-a.org/es'
   },
   hero: {
     title: [
@@ -32,12 +32,13 @@ export default {
     },
   },
   proposal: {
-    support: 'Suscribir la propuesta',
+    support: 'Adherirse a la propuesta',
     share: 'Compartir',
-    explainer: 'Cómo suscribir una propuesta',
-    seeall: 'Ver todas las 10 propuestas',
+    explainer: 'Cómo adherirse a una propuesta',
+    seeall: 'Ver las 10 propuestas',
     copy: 'Copiar enlace',
-    copied: '¡Copiado!'
+    copied: '¡Copiado!',
+    more_options: 'Más opciones...',
   },
   explainer: {
     intro: 'El proceso para subir las propuestas es el siguiente:',
@@ -54,6 +55,6 @@ export default {
     euparl: 'With Financial Support of the European Parliament. The information on this website concerns only the author, the European Parliament is not responsible for the use and content of the information.',
     follow: 'Síguenos',
     contact: 'Contacta',
-    privacy: 'Política de privacidad Policy'
+    privacy: 'Política de privacidad'
   }
 }

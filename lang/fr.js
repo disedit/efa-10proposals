@@ -4,12 +4,12 @@ export default {
     EFA: 'Alliance Libre Européenne',
     language: 'Select your language',
     skip: 'Skip to main content',
-    newwindow: '(opens in a new window)'
+    newwindow: '(Ouvre dans une nouvelle fenêtre)'
   },
   meta: {
     description: '@:hero.subtitle',
     thumbnail: '/ogimage_en.png',
-    url: 'https://efa-10proposals.netlify.app/fr'
+    url: 'https://tenproposals.e-f-a.org/fr'
   },
   hero: {
     title: [
@@ -31,12 +31,13 @@ export default {
     },
   },
   proposal: {
-    support: 'Endorse Proposal',
-    share: 'Share',
-    explainer: 'How to endorse a proposal',
-    seeall: 'See all 10 proposals',
-    copy: 'Copy Link',
-    copied: 'Copied!'
+    support: 'Approuver la proposition',
+    share: 'Partager',
+    explainer: 'Comment approuver une proposition',
+    seeall: 'Voir les 10 propositions',
+    copy: 'Copier le lien',
+    copied: 'Copié !',
+    more_options: 'More options...',
   },
   explainer: {
     intro: 'Le processus d\'approbation d\'une proposition est le suivant',
@@ -55,8 +56,8 @@ export default {
   },
   footer: {
     euparl: 'With Financial Support of the European Parliament. The information on this website concerns only the author, the European Parliament is not responsible for the use and content of the information.',
-    follow: 'Follow us',
+    follow: 'Suivez-nous',
     contact: 'Contact',
-    privacy: 'Privacy Policy'
+    privacy: 'Politique de confidentialité'
   }
 }
