@@ -5,7 +5,7 @@
       'button flex items-center bg-white text-purple shadow-xl',
       'font-semibold text-lg leading-none',
       'focus:outline-none focus:ring ring-orange/75 ring-offset-purple',
-      { 'py-4 px-4': !noPadding }
+      { 'py-4 px-3 md:px-4': !noPadding }
     ]"
     @click="$emit('click')">
     <slot />

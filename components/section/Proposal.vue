@@ -22,7 +22,7 @@
         <ProposalCard :id="`Card${proposal.number}`" class="col-span-12">
           <nuxt-content :document="proposal" />
         </ProposalCard>
-        <div :id="`Endorse${proposal.number}`" class="col-span-8 flex z-10">
+        <div :id="`Endorse${proposal.number}`" class="col-span-7 md:col-span-8 flex z-10">
           <ProposalButton
             :href="proposal.link"
             target="_blank"
@@ -51,7 +51,7 @@
         <ProposalButton
           :id="'share' + proposal.number"
           tag="button"
-          class="col-span-4"
+          class="col-span-5 md:col-span-4"
           @click="shareProposal"
         >
           <span class="mr-2">{{ $t('proposal.share') }}</span>
