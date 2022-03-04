@@ -1,7 +1,7 @@
 export default {
   global: {
     title: '@:hero.title.0 @:hero.title.1',
-    EFA: 'European Free Alliance',
+    EFA: 'Europese Vrije Alliantie',
     language: 'Select your language',
     skip: 'Skip to main content',
     newwindow: '(Opent in een nieuw venster)'
@@ -13,20 +13,21 @@ export default {
   },
   hero: {
     title: [
-      'Shaping a Europe',
-      'of All Peoples',
+      'Een Europa',
+      'van alle volkeren',
     ],
-    subtitle: '10 Proposals for the Conference on the Future of Europe',
+    subtitle: '10 voorstellen voor de conferentie over de toekomst van Europa',
     introduction: {
       paragraphs: [
-        `{0} ({1}) is an opportunity for Europeans to make their voices heard.
-        The {2} is contributing to this debate with 10 proposals for an EU that
-        truly reflects the continent’s cultural diversity.`,
-        `We invite you to read, share and comment on these proposals,
-        and to endorse them on the official #CoFoE online platform! {0}`
+        `De {0} ({1}) is een kans voor Europeanen om {2}.
+        De {3} draagt bij aan dit debat met {4} voor een EU die echt
+        de culturele diversiteit van het continent weerspiegelt.`,
+        `We nodigen je uit om deze voorstellen te lezen, te delen
+        en erop te reageren, en om ze te {0} op het officiële
+        #CoFoE online platform! {1}`
       ],
-      emphasis: ['make their voices heard', '10 proposals', 'endorse'],
-      conference: 'The Conference on the Future of Europe',
+      emphasis: ['hun stem te laten horen', '10 voorstellen', 'onderschrijven'],
+      conference: 'conferentie over de toekomst van Europa',
       hashtags: ['#CoFoE', '#TheFutureIsYours'],
       EFA: '@:global.EFA'
     },
@@ -41,15 +42,15 @@ export default {
     more_options: 'More options...',
   },
   explainer: {
-    intro: 'The process of endorsing a proposal is as follows:',
+    intro: 'De procedure om een ​​voorstel goed te keuren is als volgt:',
     list: [
-      'First, register an “EU Login” account by going to {0} and clicking the link to register.',
-      'Follow the instructions to also set up an account on the CoFoE platform.',
-      'Navigate to the proposal you want to support by using the links on this page.',
-      'Click ‘Endorse’ to add your vote to the proposal. You can also leave a comment if you wish.',
+      'Registreer eerst een “EU Login”-account door naar {0} te gaan en op de link te klikken om u te registreren.',
+      'Volg de instructies om ook een account aan te maken op het CoFoE platform.',
+      'Navigeer naar het voorstel dat u wilt steunen via de links op deze pagina.',
+      'Klik op \'Endorse\' om uw stem aan het voorstel toe te voegen. Je kunt ook een reactie achterlaten als je dat wilt.',
     ],
-    translation: 'The platform uses <strong>automatic translation</strong> so you can participate in any EU official language. You <strong>do not need to be based in an EU member state</strong> to make an endorsement or comment.',
-    thanks: 'Thank you for being part of the debate!'
+    translation: 'Het platform maakt gebruik van <strong>automatische vertaling</strong>, zodat u in elke officiële EU-taal kunt deelnemen. U <strong>hoeft niet in een EU-lidstaat te zijn gevestigd</strong> om een ​​goedkeuring of opmerking te maken.',
+    thanks: 'Bedankt voor je deelname aan het debat!'
   },
   footer: {
     euparl: 'With Financial Support of the European Parliament. The information on this website concerns only the author, the European Parliament is not responsible for the use and content of the information.',
