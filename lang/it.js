@@ -8,7 +8,7 @@ export default {
   meta: {
     description: '@:hero.subtitle',
     thumbnail: '/ogimage_en.png',
-    url: 'https://tenproposals.e-f-a.org/it'
+    url: 'http://tenproposals.e-f-a.org/it'
   },
   hero: {
     title: [
